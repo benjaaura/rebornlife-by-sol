@@ -1,0 +1,3657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="rebornlife_by_sol | Tienda de bebés reborn, accesorios y productos especiales."
+  >
+
+  <title>rebornlife_by_sol | Bebés Reborn</title>
+
+  <style>
+    :root {
+      --rosa: #e8b8c8;
+      --rosa-claro: #fdf1f5;
+      --rosa-muy-claro: #fff8fa;
+      --rosa-oscuro: #c9879f;
+      --rosa-fuerte: #b96f8b;
+      --crema: #fffaf7;
+      --marron: #66545a;
+      --marron-claro: #806f75;
+      --blanco: #ffffff;
+      --verde: #8aab91;
+      --dorado: #c9a46a;
+      --sombra: 0 10px 30px rgba(130, 90, 105, 0.12);
+      --sombra-grande: 0 20px 50px rgba(130, 90, 105, 0.18);
+      --radio: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--crema);
+      color: var(--marron);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 250, 247, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #f1dfe5;
+    }
+
+    nav {
+      max-width: 1200px;
+      height: 78px;
+      margin: auto;
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--rosa-oscuro);
+      text-decoration: none;
+      font-size: 1.35rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .menu a {
+      color: var(--marron);
+      text-decoration: none;
+      font-weight: 600;
+      transition: .3s;
+      font-size: .95rem;
+    }
+
+    .menu a:hover {
+      color: var(--rosa-oscuro);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-icon {
+      position: relative;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #f0dce3;
+      border-radius: 50%;
+      background: white;
+      color: var(--marron);
+      transition: .3s;
+    }
+
+    .nav-icon:hover {
+      background: var(--rosa-claro);
+      color: var(--rosa-oscuro);
+      transform: translateY(-2px);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -4px;
+      right: -3px;
+      min-width: 19px;
+      height: 19px;
+      padding: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background: var(--rosa-fuerte);
+      color: white;
+      font-size: .7rem;
+      font-weight: 800;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 1.7rem;
+      color: var(--marron);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 680px;
+      padding: 90px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background:
+        radial-gradient(circle at 10% 20%, #f9dce6 0, transparent 28%),
+        radial-gradient(circle at 90% 70%, #f5d8e2 0, transparent 30%),
+        linear-gradient(135deg, #fff5f8, #fffaf7);
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 18px;
+      border: 1px solid #eccbd7;
+      border-radius: 30px;
+      background: rgba(255,255,255,.7);
+      color: var(--rosa-fuerte);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin-bottom: 15px;
+      color: #bd7891;
+      font-size: clamp(2.7rem, 7vw, 5.5rem);
+      line-height: 1.05;
+    }
+
+    .hero h2 {
+      margin-bottom: 20px;
+      color: var(--marron);
+      font-size: clamp(1.5rem, 4vw, 2.6rem);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 32px;
+      color: #806d73;
+      font-size: 1.12rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      background: var(--rosa-oscuro);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: #b8748d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(185,111,139,.2);
+    }
+
+    .btn-outline {
+      background: white;
+      border: 1px solid #e8c5d1;
+      color: var(--rosa-fuerte);
+    }
+
+    .btn-outline:hover {
+      background: var(--rosa-claro);
+    }
+
+    .hero-features {
+      max-width: 900px;
+      margin: 55px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .hero-feature {
+      padding: 18px 10px;
+      border: 1px solid rgba(230,194,207,.7);
+      border-radius: 18px;
+      background: rgba(255,255,255,.65);
+    }
+
+    .hero-feature strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--rosa-fuerte);
+    }
+
+    .hero-feature span {
+      font-size: .82rem;
+      color: var(--marron-claro);
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .section-title .eyebrow {
+      margin-bottom: 8px;
+      color: var(--rosa-fuerte);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      margin-bottom: 10px;
+      color: #bd7891;
+      font-size: clamp(2rem, 5vw, 2.7rem);
+    }
+
+    .section-title p {
+      color: #8b777e;
+    }
+
+    /* =========================
+       BANNER
+    ========================= */
+
+    .announcement {
+      padding: 12px 20px;
+      background: #66545a;
+      color: white;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    .announcement strong {
+      color: #f8d7e2;
+    }
+
+    /* =========================
+       PRODUCTOS
+    ========================= */
+
+    #bebes {
+      background: white;
+    }
+
+    .shop-toolbar {
+      margin-bottom: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px 18px 14px 45px;
+      border: 1px solid #ecdbe1;
+      border-radius: 30px;
+      outline: none;
+      background: #fffafa;
+      color: var(--marron);
+    }
+
+    .search-box input:focus {
+      border-color: var(--rosa);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #a88d96;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 16px;
+      border: 1px solid #ecdbe1;
+      border-radius: 25px;
+      background: white;
+      color: var(--marron);
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--rosa-oscuro);
+      border-color: var(--rosa-oscuro);
+      color: white;
+    }
+
+    .bebes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .baby-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #f2e0e6;
+      border-radius: var(--radio);
+      background: var(--crema);
+      box-shadow: var(--sombra);
+      transition: .3s;
+    }
+
+    .baby-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--sombra-grande);
+    }
+
+    .product-image {
+      position: relative;
+      height: 310px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #f9e3e9, #f6d3df);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: .5s;
+    }
+
+    .baby-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 6px 11px;
+      border-radius: 20px;
+      background: white;
+      color: var(--rosa-fuerte);
+      font-size: .75rem;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    }
+
+    .favorite {
+      position: absolute;
+      top: 13px;
+      right: 13px;
+      width: 39px;
+      height: 39px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,.9);
+      color: #b99ca5;
+      font-size: 1.1rem;
+      transition: .3s;
+    }
+
+    .favorite:hover,
+    .favorite.liked {
+      color: #d96d91;
+      transform: scale(1.08);
+    }
+
+    .baby-info {
+      padding: 20px;
+    }
+
+    .category {
+      margin-bottom: 4px;
+      color: #aa8b95;
+      font-size: .76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .baby-info h3 {
+      margin-bottom: 7px;
+      color: #bd7891;
+      font-size: 1.35rem;
+    }
+
+    .baby-info p {
+      min-height: 70px;
+      color: #806f75;
+      font-size: .9rem;
+    }
+
+    .rating {
+      margin: 9px 0;
+      color: var(--dorado);
+      font-size: .88rem;
+    }
+
+    .price-row {
+      margin: 13px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--marron);
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .stock {
+      color: var(--verde);
+      font-size: .75rem;
+      font-weight: 700;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .card-btn {
+      padding: 11px;
+      border: none;
+      border-radius: 20px;
+      background: #f1cbd7;
+      color: #6e515b;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .card-btn:hover {
+      background: var(--rosa);
+    }
+
+    .card-btn.primary {
+      background: var(--rosa-oscuro);
+      color: white;
+    }
+
+    .card-btn.primary:hover {
+      background: var(--rosa-fuerte);
+    }
+
+    .no-results {
+      display: none;
+      padding: 50px 20px;
+      text-align: center;
+      color: var(--marron-claro);
+    }
+
+    /* =========================
+       CATEGORIAS
+    ========================= */
+
+    .categories {
+      background: var(--rosa-claro);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      padding: 30px 20px;
+      border: 1px solid #f0dbe2;
+      border-radius: 22px;
+      background: white;
+      text-align: center;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sombra);
+    }
+
+    .category-icon {
+      margin-bottom: 12px;
+      font-size: 2.7rem;
+    }
+
+    .category-card h3 {
+      margin-bottom: 4px;
+      color: var(--rosa-fuerte);
+    }
+
+    .category-card p {
+      color: var(--marron-claro);
+      font-size: .85rem;
+    }
+
+    /* =========================
+       NOSOTROS
+    ========================= */
+
+    #nosotros {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .about-visual {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 50% 30%, #f8dbe5, transparent 35%),
+        linear-gradient(145deg, #fff3f6, #f7d9e3);
+      font-size: 8rem;
+      box-shadow: var(--sombra);
+    }
+
+    .about-content .heart {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+
+    .about-content h2 {
+      margin-bottom: 18px;
+      color: #bd7891;
+      font-size: 2.4rem;
+    }
+
+    .about-content p {
+      margin-bottom: 16px;
+      color: #79666d;
+    }
+
+    .about-list {
+      margin-top: 20px;
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .about-list li {
+      padding: 11px 14px;
+      border-radius: 12px;
+      background: var(--rosa-claro);
+      color: var(--marron);
+    }
+
+    /* =========================
+       COMO COMPRAR
+    ========================= */
+
+    #comprar {
+      background: var(--rosa-claro);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      position: relative;
+      padding: 30px 20px;
+      border: 1px solid #f0dbe2;
+      border-radius: 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--rosa-oscuro);
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      color: #bd7891;
+    }
+
+    .step p {
+      color: #806f75;
+      font-size: .9rem;
+    }
+
+    /* =========================
+       SERVICIOS
+    ========================= */
+
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      padding: 30px;
+      border: 1px solid #f0dce3;
+      border-radius: 22px;
+      background: #fffafb;
+    }
+
+    .service-icon {
+      margin-bottom: 12px;
+      font-size: 2rem;
+    }
+
+    .service h3 {
+      margin-bottom: 8px;
+      color: var(--rosa-fuerte);
+    }
+
+    .service p {
+      color: var(--marron-claro);
+      font-size: .92rem;
+    }
+
+    /* =========================
+       MEDIOS DE PAGO
+    ========================= */
+
+    .payment {
+      background: #fff7f9;
+    }
+
+    .payment-box {
+      padding: 40px;
+      border-radius: 28px;
+      background: white;
+      box-shadow: var(--sombra);
+      text-align: center;
+    }
+
+    .payment-methods {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .payment-method {
+      padding: 20px;
+      border: 1px solid #f0dce3;
+      border-radius: 16px;
+      background: var(--rosa-muy-claro);
+    }
+
+    .payment-method strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--rosa-fuerte);
+    }
+
+    .payment-method span {
+      color: var(--marron-claro);
+      font-size: .82rem;
+    }
+
+    /* =========================
+       TESTIMONIOS
+    ========================= */
+
+    .reviews {
+      background: white;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review {
+      padding: 28px;
+      border: 1px solid #f0dce3;
+      border-radius: 22px;
+      background: var(--crema);
+    }
+
+    .review-stars {
+      margin-bottom: 13px;
+      color: var(--dorado);
+    }
+
+    .review p {
+      margin-bottom: 18px;
+      color: #75656b;
+      font-size: .94rem;
+      font-style: italic;
+    }
+
+    .review-user {
+      color: var(--rosa-fuerte);
+      font-weight: 800;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      background: var(--rosa-claro);
+    }
+
+    .faq-container {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      margin-bottom: 12px;
+      overflow: hidden;
+      border: 1px solid #efdbe3;
+      border-radius: 16px;
+      background: white;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 19px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+      background: white;
+      color: var(--marron);
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      color: var(--marron-claro);
+      font-size: .92rem;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-question {
+      color: var(--rosa-fuerte);
+    }
+
+    /* =========================
+       INSTAGRAM / CONTACTO
+    ========================= */
+
+    #contacto {
+      background: linear-gradient(135deg, #f9e3e9, #fff8f5);
+    }
+
+    .contact-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 55px 30px;
+      border-radius: 30px;
+      background: white;
+      box-shadow: var(--sombra-grande);
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 15px;
+      color: #bd7891;
+      font-size: 2.4rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 25px;
+      color: #806f75;
+    }
+
+    .instagram {
+      display: inline-block;
+      margin-top: 20px;
+      color: #bd7891;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .social-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter {
+      padding: 65px 20px;
+      background: #66545a;
+      color: white;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      margin-bottom: 8px;
+      color: #f7dce5;
+    }
+
+    .newsletter p {
+      margin-bottom: 22px;
+      color: #f2dfe5;
+    }
+
+    .newsletter-form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 0;
+      padding: 14px 17px;
+      border: none;
+      border-radius: 25px;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      padding: 14px 22px;
+      border: none;
+      border-radius: 25px;
+      background: var(--rosa);
+      color: var(--marron);
+      font-weight: 800;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 40px 20px;
+      background: #514349;
+      color: white;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin-bottom: 8px;
+      color: #f3d3de;
+      font-size: 1.45rem;
+      font-weight: bold;
+    }
+
+    footer p {
+      color: #e9d7dc;
+      font-size: .88rem;
+    }
+
+    .footer-links {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #f3dfe5;
+      text-decoration: none;
+      font-size: .88rem;
+    }
+
+    /* =========================
+       CARRITO
+    ========================= */
+
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      background: rgba(50, 35, 40, .4);
+    }
+
+    .cart-overlay.active {
+      display: block;
+    }
+
+    .cart-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min(440px, 100%);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      box-shadow: -15px 0 40px rgba(0,0,0,.12);
+      animation: slideCart .3s ease;
+    }
+
+    @keyframes slideCart {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .cart-header {
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #f0dce3;
+    }
+
+    .cart-header h2 {
+      color: var(--rosa-fuerte);
+    }
+
+    .close-cart {
+      border: none;
+      background: none;
+      color: var(--marron);
+      font-size: 1.7rem;
+    }
+
+    .cart-items {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .empty-cart {
+      padding: 50px 20px;
+      text-align: center;
+      color: var(--marron-claro);
+    }
+
+    .cart-item {
+      margin-bottom: 15px;
+      padding: 12px;
+      display: grid;
+      grid-template-columns: 70px 1fr auto;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid #f0dce3;
+      border-radius: 15px;
+    }
+
+    .cart-item img {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .cart-item h4 {
+      margin-bottom: 4px;
+      color: var(--rosa-fuerte);
+    }
+
+    .cart-item-price {
+      font-size: .88rem;
+      color: var(--marron-claro);
+    }
+
+    .remove-item {
+      border: none;
+      background: none;
+      color: #c8869e;
+      font-size: 1.1rem;
+    }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid #f0dce3;
+    }
+
+    .cart-total {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      border: none;
+    }
+
+    /* =========================
+       MODAL PRODUCTO
+    ========================= */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(50,35,40,.55);
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      position: relative;
+      width: min(900px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 25px;
+      background: white;
+      box-shadow: var(--sombra-grande);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      color: var(--marron);
+      font-size: 1.3rem;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-image {
+      min-height: 500px;
+    }
+
+    .modal-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .modal-info {
+      padding: 45px 35px;
+    }
+
+    .modal-info .category {
+      margin-bottom: 8px;
+    }
+
+    .modal-info h2 {
+      margin-bottom: 12px;
+      color: var(--rosa-fuerte);
+      font-size: 2rem;
+    }
+
+    .modal-info p {
+      margin-bottom: 18px;
+      color: var(--marron-claro);
+    }
+
+    .modal-details {
+      margin: 20px 0;
+      padding: 18px;
+      border-radius: 16px;
+      background: var(--rosa-claro);
+    }
+
+    .modal-details div {
+      padding: 5px 0;
+      font-size: .9rem;
+    }
+
+    /* =========================
+       TOAST
+    ========================= */
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      z-index: 5000;
+      padding: 13px 20px;
+      border-radius: 30px;
+      background: #66545a;
+      color: white;
+      box-shadow: var(--sombra);
+      transform: translate(-50%, 100px);
+      opacity: 0;
+      transition: .35s;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+
+    /* =========================
+       BOTON ARRIBA
+    ========================= */
+
+    .back-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 900;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: var(--rosa-oscuro);
+      color: white;
+      box-shadow: var(--sombra);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+    }
+
+    .back-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1000px) {
+      .bebes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .payment-methods {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 20px;
+        flex-direction: column;
+        background: rgba(255,250,247,.98);
+        border-bottom: 1px solid #f0dce3;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      nav {
+        height: 78px;
+      }
+
+      .about-grid,
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        min-height: 300px;
+      }
+
+      .modal-image {
+        min-height: 300px;
+        max-height: 400px;
+      }
+
+      .service-grid,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 65px 16px;
+      }
+
+      .logo {
+        font-size: 1.05rem;
+      }
+
+      .nav-actions {
+        gap: 5px;
+      }
+
+      .hero {
+        min-height: 600px;
+        padding: 70px 18px;
+      }
+
+      .hero-features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .bebes-grid,
+      .category-grid,
+      .steps,
+      .payment-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .shop-toolbar {
+        align-items: stretch;
+      }
+
+      .search-box {
+        min-width: 100%;
+      }
+
+      .filters {
+        justify-content: center;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+      }
+
+      .modal-info {
+        padding: 30px 22px;
+      }
+
+      .card-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       BARRA SUPERIOR
+  ========================== -->
+
+  <div class="announcement">
+    🤍 <strong>Bienvenidos a rebornlife_by_sol</strong> · Bebés reborn elegidos con amor
+  </div>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+    <nav>
+
+      <a href="#inicio" class="logo">
+        rebornlife_by_sol 🤍
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+
+      <ul class="menu" id="mainMenu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#bebes">Bebés</a></li>
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#comprar">Comprar</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+
+        <button
+          class="nav-icon"
+          onclick="scrollToShop()"
+          aria-label="Buscar"
+        >
+          🔎
+        </button>
+
+        <button
+          class="nav-icon"
+          onclick="openCart()"
+          aria-label="Carrito"
+        >
+          🛒
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        ✨ TIENDA DE BEBÉS REBORN ✨
+      </div>
+
+      <h1>
+        rebornlife_by_sol
+      </h1>
+
+      <h2>
+        Bebés Reborn hechos con amor 🤍
+      </h2>
+
+      <p>
+        Descubrí nuestra colección de bebés reborn,
+        accesorios y pequeños detalles preparados con
+        muchísimo cariño para coleccionistas y amantes
+        del mundo reborn.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#bebes" class="btn">
+          👶 Ver bebés
+        </a>
+
+        <a href="#contacto" class="btn btn-outline">
+          💌 Consultarnos
+        </a>
+
+      </div>
+
+      <div class="hero-features">
+
+        <div class="hero-feature">
+          <strong>🤍 Especiales</strong>
+          <span>Cada bebé es único</span>
+        </div>
+
+        <div class="hero-feature">
+          <strong>🎀 Detallistas</strong>
+          <span>Cuidados en cada detalle</span>
+        </div>
+
+        <div class="hero-feature">
+          <strong>📦 Envíos</strong>
+          <span>Coordinamos la entrega</span>
+        </div>
+
+        <div class="hero-feature">
+          <strong>💌 Atención</strong>
+          <span>Te ayudamos a elegir</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PRODUCTOS
+  ========================== -->
+
+  <section id="bebes">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          Nuestra colección
+        </div>
+
+        <h2>
+          Bebés disponibles 👶
+        </h2>
+
+        <p>
+          Elegí tu favorito y consultanos por disponibilidad.
+        </p>
+
+      </div>
+
+      <!-- BUSCADOR + FILTROS -->
+
+      <div class="shop-toolbar">
+
+        <div class="search-box">
+
+          <span class="search-icon">
+            🔎
+          </span>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar un bebé..."
+          >
+
+        </div>
+
+        <div class="filters">
+
+          <button
+            class="filter-btn active"
+            data-filter="todos"
+          >
+            Todos
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="reborn"
+          >
+            Bebés Reborn
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="premium"
+          >
+            Premium
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="accesorios"
+          >
+            Accesorios
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTOS -->
+
+      <div class="bebes-grid" id="productGrid">
+
+        <!-- PRODUCTO 1 -->
+
+        <article
+          class="baby-card product-card"
+          data-category="reborn"
+          data-name="Bebé Isabella"
+          data-id="isabella"
+          data-price="280000"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=80"
+              alt="Bebé Isabella"
+            >
+
+            <span class="product-badge">
+              Disponible
+            </span>
+
+            <button class="favorite">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="baby-info">
+
+            <div class="category">
+              Bebé Reborn
+            </div>
+
+            <h3>
+              Bebé Isabella
+            </h3>
+
+            <p>
+              Hermoso bebé reborn con detalles delicados
+              y acabado artesanal.
+            </p>
+
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <div class="price-row">
+
+              <div class="price">
+                $280.000
+              </div>
+
+              <div class="stock">
+                ● Disponible
+              </div>
+
+            </div>
+
+            <div class="card-actions">
+
+              <button
+                class="card-btn"
+                onclick="showProduct('isabella')"
+              >
+                Ver detalles
+              </button>
+
+              <button
+                class="card-btn primary"
+                onclick="addToCart('isabella')"
+              >
+                🛒 Agregar
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- PRODUCTO 2 -->
+
+        <article
+          class="baby-card product-card"
+          data-category="premium"
+          data-name="Bebé Emma"
+          data-id="emma"
+          data-price="320000"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=700&q=80"
+              alt="Bebé Emma"
+            >
+
+            <span class="product-badge">
+              Premium
+            </span>
+
+            <button class="favorite">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="baby-info">
+
+            <div class="category">
+              Colección Premium
+            </div>
+
+            <h3>
+              Bebé Emma
+            </h3>
+
+            <p>
+              Un modelo dulce y especial,
+              preparado con muchísimo cariño.
+            </p>
+
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <div class="price-row">
+
+              <div class="price">
+                $320.000
+              </div>
+
+              <div class="stock">
+                ● Disponible
+              </div>
+
+            </div>
+
+            <div class="card-actions">
+
+              <button
+                class="card-btn"
+                onclick="showProduct('emma')"
+              >
+                Ver detalles
+              </button>
+
+              <button
+                class="card-btn primary"
+                onclick="addToCart('emma')"
+              >
+                🛒 Agregar
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- PRODUCTO 3 -->
+
+        <article
+          class="baby-card product-card"
+          data-category="reborn"
+          data-name="Bebé Olivia"
+          data-id="olivia"
+          data-price="295000"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1544127568-61c1c1b9f2f6?auto=format&fit=crop&w=700&q=80"
+              alt="Bebé Olivia"
+            >
+
+            <span class="product-badge">
+              Nuevo
+            </span>
+
+            <button class="favorite">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="baby-info">
+
+            <div class="category">
+              Bebé Reborn
+            </div>
+
+            <h3>
+              Bebé Olivia
+            </h3>
+
+            <p>
+              Detalles cuidadosamente realizados para lograr
+              una apariencia única.
+            </p>
+
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <div class="price-row">
+
+              <div class="price">
+                $295.000
+              </div>
+
+              <div class="stock">
+                ● Disponible
+              </div>
+
+            </div>
+
+            <div class="card-actions">
+
+              <button
+                class="card-btn"
+                onclick="showProduct('olivia')"
+              >
+                Ver detalles
+              </button>
+
+              <button
+                class="card-btn primary"
+                onclick="addToCart('olivia')"
+              >
+                🛒 Agregar
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- PRODUCTO 4 -->
+
+        <article
+          class="baby-card product-card"
+          data-category="premium"
+          data-name="Bebé Sofía"
+          data-id="sofia"
+          data-price="350000"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=700&q=80"
+              alt="Bebé Sofía"
+            >
+
+            <span class="product-badge">
+              Premium
+            </span>
+
+            <button class="favorite">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="baby-info">
+
+            <div class="category">
+              Colección Premium
+            </div>
+
+            <h3>
+              Bebé Sofía
+            </h3>
+
+            <p>
+              Una opción adorable para quienes aman
+              el maravilloso mundo reborn.
+            </p>
+
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <div class="price-row">
+
+              <div class="price">
+                $350.000
+              </div>
+
+              <div class="stock">
+                ● Disponible
+              </div>
+
+            </div>
+
+            <div class="card-actions">
+
+              <button
+                class="card-btn"
+                onclick="showProduct('sofia')"
+              >
+                Ver detalles
+              </button>
+
+              <button
+                class="card-btn primary"
+                onclick="addToCart('sofia')"
+              >
+                🛒 Agregar
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- PRODUCTO 5 -->
+
+        <article
+          class="baby-card product-card"
+          data-category="accesorios"
+          data-name="Set de ropita"
+          data-id="ropita"
+          data-price="45000"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80"
+              alt="Set de ropita"
+            >
+
+            <span class="product-badge">
+              Accesorio
+            </span>
+
+            <button class="favorite">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="baby-info">
+
+            <div class="category">
+              Accesorios
+            </div>
+
+            <h3>
+              Set de ropita
+            </h3>
+
+            <p>
+              Conjunto delicado para vestir y mimar
+              a tu bebé reborn.
+            </p>
+
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <div class="price-row">
+
+              <div class="price">
+                $45.000
+              </div>
+
+              <div class="stock">
+                ● Disponible
+              </div>
+
+            </div>
+
+            <div class="card-actions">
+
+              <button
+                class="card-btn"
+                onclick="showProduct('ropita')"
+              >
+                Ver detalles
+              </button>
+
+              <button
+                class="card-btn primary"
+                onclick="addToCart('ropita')"
+              >
+                🛒 Agregar
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- PRODUCTO 6 -->
+
+        <article
+          class="baby-card product-card"
+          data-category="accesorios"
+          data-name="Manta personalizada"
+          data-id="manta"
+          data-price="38000"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1584839404042-8bcf3b9a8d7a?auto=format&fit=crop&w=700&q=80"
+              alt="Manta para bebé"
+            >
+
+            <span class="product-badge">
+              Accesorio
+            </span>
+
+            <button class="favorite">
+              ♡
+            </button>
+
+          </div>
+
+          <div class="baby-info">
+
+            <div class="category">
+              Accesorios
+            </div>
+
+            <h3>
+              Manta especial
+            </h3>
+
+            <p>
+              Una manta suave y delicada para completar
+              el ajuar de tu bebé.
+            </p>
+
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <div class="price-row">
+
+              <div class="price">
+                $38.000
+              </div>
+
+              <div class="stock">
+                ● Disponible
+              </div>
+
+            </div>
+
+            <div class="card-actions">
+
+              <button
+                class="card-btn"
+                onclick="showProduct('manta')"
+              >
+                Ver detalles
+              </button>
+
+              <button
+                class="card-btn primary"
+                onclick="addToCart('manta')"
+              >
+                🛒 Agregar
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="no-results" id="noResults">
+        <div style="font-size:3rem;">🧸</div>
+        <h3>No encontramos ese producto</h3>
+        <p>Probá con otro nombre o categoría.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CATEGORIAS
+  ========================== -->
+
+  <section class="categories" id="categorias">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          Encontrá lo que buscás
+        </div>
+
+        <h2>
+          Nuestras categorías
+        </h2>
+
+        <p>
+          Todo para acompañar tu experiencia reborn.
+        </p>
+
+      </div>
+
+      <div class="category-grid">
+
+        <a href="#bebes" class="category-card">
+          <div class="category-icon">👶</div>
+          <h3>Bebés Reborn</h3>
+          <p>Modelos disponibles</p>
+        </a>
+
+        <a href="#bebes" class="category-card">
+          <div class="category-icon">👑</div>
+          <h3>Premium</h3>
+          <p>Modelos especiales</p>
+        </a>
+
+        <a href="#bebes" class="category-card">
+          <div class="category-icon">🎀</div>
+          <h3>Ropita</h3>
+          <p>Conjuntos y accesorios</p>
+        </a>
+
+        <a href="#bebes" class="category-card">
+          <div class="category-icon">🧸</div>
+          <h3>Accesorios</h3>
+          <p>Detalles para tu bebé</p>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       NOSOTROS
+  ========================== -->
+
+  <section id="nosotros">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-visual">
+          👶🏻
+        </div>
+
+        <div class="about-content">
+
+          <div class="heart">
+            🤍
+          </div>
+
+          <h2>
+            Detrás de rebornlife_by_sol
+          </h2>
+
+          <p>
+            Bienvenidos a nuestro pequeño rincón del maravilloso
+            mundo de los bebés reborn.
+          </p>
+
+          <p>
+            Nos encanta encontrar bebés especiales y cuidar cada
+            detalle para que cada incorporación sea una experiencia
+            hermosa para quien la recibe.
+          </p>
+
+          <p>
+            Nuestro objetivo es acompañarte desde el momento en
+            que elegís tu bebé hasta que llega a tus manos.
+          </p>
+
+          <ul class="about-list">
+
+            <li>
+              🤍 Atención personalizada
+            </li>
+
+            <li>
+              🎀 Bebés y accesorios seleccionados
+            </li>
+
+            <li>
+              📦 Preparación cuidada
+            </li>
+
+            <li>
+              💌 Acompañamiento durante la compra
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       COMO COMPRAR
+  ========================== -->
+
+  <section id="comprar">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          Fácil y sencillo
+        </div>
+
+        <h2>
+          ¿Cómo comprar?
+        </h2>
+
+        <p>
+          Comprar tu bebé reborn es muy sencillo.
+        </p>
+
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">
+            1
+          </div>
+
+          <h3>
+            Elegí tu bebé
+          </h3>
+
+          <p>
+            Mirá nuestra colección y elegí el bebé
+            que más te guste.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">
+            2
+          </div>
+
+          <h3>
+            Consultanos
+          </h3>
+
+          <p>
+            Escribinos para conocer disponibilidad,
+            precio y detalles.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">
+            3
+          </div>
+
+          <h3>
+            Coordinamos
+          </h3>
+
+          <p>
+            Coordinamos el pago, preparación
+            y entrega.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">
+            4
+          </div>
+
+          <h3>
+            ¡A disfrutar!
+          </h3>
+
+          <p>
+            Recibí tu bebé y disfrutá de
+            tu nueva incorporación.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       SERVICIOS
+  ========================== -->
+
+  <section class="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          Nuestra atención
+        </div>
+
+        <h2>
+          Pensamos en cada detalle
+        </h2>
+
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service">
+
+          <div class="service-icon">
+            🎀
+          </div>
+
+          <h3>
+            Preparación especial
+          </h3>
+
+          <p>
+            Cada bebé se prepara con dedicación
+            antes de llegar a su nuevo hogar.
+          </p>
+
+        </div>
+
+        <div class="service">
+
+          <div class="service-icon">
+            📦
+          </div>
+
+          <h3>
+            Entrega cuidada
+          </h3>
+
+          <p>
+            Coordinamos la entrega para que
+            recibas todo correctamente preparado.
+          </p>
+
+        </div>
+
+        <div class="service">
+
+          <div class="service-icon">
+            💌
+          </div>
+
+          <h3>
+            Atención personalizada
+          </h3>
+
+          <p>
+            Si tenés dudas sobre un modelo,
+            podés consultarnos antes de comprar.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PAGOS
+  ========================== -->
+
+  <section class="payment">
+
+    <div class="container">
+
+      <div class="payment-box">
+
+        <div class="section-title" style="margin-bottom:0;">
+
+          <div class="eyebrow">
+            Compra segura
+          </div>
+
+          <h2>
+            Medios de pago
+          </h2>
+
+          <p>
+            Consultanos por las opciones disponibles
+            para tu compra.
+          </p>
+
+        </div>
+
+        <div class="payment-methods">
+
+          <div class="payment-method">
+            <strong>💵 Efectivo</strong>
+            <span>Consultá condiciones</span>
+          </div>
+
+          <div class="payment-method">
+            <strong>🏦 Transferencia</strong>
+            <span>Coordinamos por mensaje</span>
+          </div>
+
+          <div class="payment-method">
+            <strong>💳 Tarjeta</strong>
+            <span>Consultá disponibilidad</span>
+          </div>
+
+          <div class="payment-method">
+            <strong>📱 Otros medios</strong>
+            <span>Preguntanos</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       TESTIMONIOS
+  ========================== -->
+
+  <section class="reviews">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          Experiencias
+        </div>
+
+        <h2>
+          Lo que dicen nuestras clientas 🤍
+        </h2>
+
+      </div>
+
+      <div class="review-grid">
+
+        <div class="review">
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "Mi bebé llegó hermoso y súper bien preparado.
+            Estoy enamorada de cada detalle."
+          </p>
+
+          <div class="review-user">
+            — Cliente de rebornlife_by_sol
+          </div>
+
+        </div>
+
+        <div class="review">
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "La atención fue excelente y me ayudaron
+            muchísimo a elegir mi primer bebé reborn."
+          </p>
+
+          <div class="review-user">
+            — Cliente de rebornlife_by_sol
+          </div>
+
+        </div>
+
+        <div class="review">
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "Todo hermoso, desde la elección hasta
+            recibir mi bebé. Una experiencia preciosa."
+          </p>
+
+          <div class="review-user">
+            — Cliente de rebornlife_by_sol
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FAQ
+  ========================== -->
+
+  <section class="faq" id="faq">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          Ayuda
+        </div>
+
+        <h2>
+          Preguntas frecuentes
+        </h2>
+
+        <p>
+          Algunas dudas que suelen surgir antes de comprar.
+        </p>
+
+      </div>
+
+      <div class="faq-container">
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            ¿Los bebés están disponibles?
+            <span>＋</span>
+          </button>
+
+          <div class="faq-answer">
+            La disponibilidad puede cambiar. Consultanos por
+            el bebé que te interesa antes de realizar la compra.
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            ¿Realizan envíos?
+            <span>＋</span>
+          </button>
+
+          <div class="faq-answer">
+            Coordinamos las opciones de entrega y envío según
+            la ubicación. Escribinos para conocer las alternativas.
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            ¿Puedo consultar antes de comprar?
+            <span>＋</span>
+          </button>
+
+          <div class="faq-answer">
+            ¡Por supuesto! Podés consultarnos por cualquier bebé,
+            accesorio, precio, disponibilidad o forma de entrega.
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            ¿Los bebés vienen con accesorios?
+            <span>＋</span>
+          </button>
+
+          <div class="faq-answer">
+            Cada bebé puede tener diferentes accesorios o
+            complementos. Consultanos específicamente por el
+            modelo que te interesa.
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            ¿Puedo reservar un bebé?
+            <span>＋</span>
+          </button>
+
+          <div class="faq-answer">
+            Las reservas dependen de cada caso. Consultanos
+            para conocer las condiciones actuales.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CONTACTO
+  ========================== -->
+
+  <section id="contacto">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div style="font-size:3rem;">
+          🤍
+        </div>
+
+        <h2>
+          ¿Encontraste tu bebé?
+        </h2>
+
+        <p>
+          Escribinos para conocer disponibilidad, precio,
+          formas de pago y opciones de entrega.
+        </p>
+
+        <a
+          class="btn"
+          href="https://www.instagram.com/rebornlife_by_sol/"
+          target="_blank"
+          rel="noopener"
+        >
+          📷 Hablar por Instagram
+        </a>
+
+        <a
+          class="instagram"
+          href="https://www.instagram.com/rebornlife_by_sol/"
+          target="_blank"
+          rel="noopener"
+        >
+          @rebornlife_by_sol
+        </a>
+
+        <div class="social-buttons">
+
+          <a
+            class="btn btn-outline"
+            href="https://www.instagram.com/rebornlife_by_sol/"
+            target="_blank"
+            rel="noopener"
+          >
+            ✨ Ver Instagram
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="#bebes"
+          >
+            👶 Ver colección
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       NEWSLETTER
+  ========================== -->
+
+  <section class="newsletter">
+
+    <div class="container">
+
+      <h2>
+        💌 Recibí novedades
+      </h2>
+
+      <p>
+        Nuevos bebés, accesorios y novedades de rebornlife_by_sol.
+      </p>
+
+      <form class="newsletter-form" id="newsletterForm">
+
+        <input
+          type="email"
+          placeholder="Tu correo electrónico"
+          required
+        >
+
+        <button type="submit">
+          Suscribirme
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-logo">
+      rebornlife_by_sol 🤍
+    </div>
+
+    <p>
+      Bebés Reborn | Hechos con amor
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#inicio">
+        Inicio
+      </a>
+
+      <a href="#bebes">
+        Bebés
+      </a>
+
+      <a href="#nosotros">
+        Nosotros
+      </a>
+
+      <a href="#faq">
+        Preguntas
+      </a>
+
+      <a href="#contacto">
+        Contacto
+      </a>
+
+      <a
+        href="https://www.instagram.com/rebornlife_by_sol/"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+    <p>
+      © 2026 rebornlife_by_sol · Todos los derechos reservados
+    </p>
+
+  </footer>
+
+  <!-- =========================
+       CARRITO
+  ========================== -->
+
+  <div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart-panel">
+
+      <div class="cart-header">
+
+        <h2>
+          🛒 Mi carrito
+        </h2>
+
+        <button
+          class="close-cart"
+          onclick="closeCart()"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <div
+        class="cart-items"
+        id="cartItems"
+      >
+      </div>
+
+      <div class="cart-footer">
+
+        <div class="cart-total">
+
+          <span>
+            Total
+          </span>
+
+          <span id="cartTotal">
+            $0
+          </span>
+
+        </div>
+
+        <button
+          class="btn checkout-btn"
+          onclick="checkout()"
+        >
+          💌 Consultar compra
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       MODAL PRODUCTO
+  ========================== -->
+
+  <div class="modal" id="productModal">
+
+    <div class="modal-content">
+
+      <button
+        class="modal-close"
+        onclick="closeProduct()"
+      >
+        ×
+      </button>
+
+      <div class="modal-grid">
+
+        <div class="modal-image">
+
+          <img
+            id="modalImage"
+            src=""
+            alt=""
+          >
+
+        </div>
+
+        <div class="modal-info">
+
+          <div
+            class="category"
+            id="modalCategory"
+          >
+          </div>
+
+          <h2 id="modalTitle">
+          </h2>
+
+          <div
+            class="rating"
+            id="modalRating"
+          >
+            ★★★★★
+          </div>
+
+          <p id="modalDescription">
+          </p>
+
+          <div class="modal-details">
+
+            <div>
+              🤍 <strong>Estado:</strong> Disponible
+            </div>
+
+            <div>
+              🎀 <strong>Preparación:</strong> Especial
+            </div>
+
+            <div>
+              📦 <strong>Entrega:</strong> A coordinar
+            </div>
+
+            <div>
+              💌 <strong>Consultas:</strong> Instagram
+            </div>
+
+          </div>
+
+          <div
+            class="price"
+            id="modalPrice"
+            style="margin-bottom:20px;"
+          >
+          </div>
+
+          <button
+            class="btn"
+            id="modalAddButton"
+          >
+            🛒 Agregar al carrito
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       TOAST
+  ========================== -->
+
+  <div
+    class="toast"
+    id="toast"
+  >
+    Producto agregado al carrito 🤍
+  </div>
+
+  <!-- =========================
+       VOLVER ARRIBA
+  ========================== -->
+
+  <button
+    class="back-top"
+    id="backTop"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+  >
+    ↑
+  </button>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* =========================
+       PRODUCTOS
+    ========================== */
+
+    const products = {
+
+      isabella: {
+        name: "Bebé Isabella",
+        price: 280000,
+        category: "Bebé Reborn",
+        image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=80",
+        description:
+          "Hermoso bebé reborn con detalles delicados y una presentación cuidada. Ideal para quienes buscan incorporar un bebé especial a su colección."
+      },
+
+      emma: {
+        name: "Bebé Emma",
+        price: 320000,
+        category: "Colección Premium",
+        image: "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=900&q=80",
+        description:
+          "Un modelo dulce y especial preparado con muchísimo cariño. Una hermosa opción para amantes del mundo reborn."
+      },
+
+      olivia: {
+        name: "Bebé Olivia",
+        price: 295000,
+        category: "Bebé Reborn",
+        image: "https://images.unsplash.com/photo-1544127568-61c1c1b9f2f6?auto=format&fit=crop&w=900&q=80",
+        description:
+          "Un modelo con detalles cuidadosamente realizados para lograr una apariencia única y adorable."
+      },
+
+      sofia: {
+        name: "Bebé Sofía",
+        price: 350000,
+        category: "Colección Premium",
+        image: "https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=900&q=80",
+        description:
+          "Una opción especial para quienes buscan un bebé reborn con una presentación cuidada y muchos detalles."
+      },
+
+      ropita: {
+        name: "Set de ropita",
+        price: 45000,
+        category: "Accesorios",
+        image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=80",
+        description:
+          "Conjunto delicado pensado para vestir y mimar a tu bebé reborn."
+      },
+
+      manta: {
+        name: "Manta especial",
+        price: 38000,
+        category: "Accesorios",
+        image: "https://images.unsplash.com/photo-1584839404042-8bcf3b9a8d7a?auto=format&fit=crop&w=900&q=80",
+        description:
+          "Una manta suave y delicada para completar el ajuar de tu bebé."
+      }
+
+    };
+
+
+    /* =========================
+       CARRITO
+    ========================== */
+
+    let cart = [];
+
+
+    function formatPrice(price) {
+
+      return "$" + price.toLocaleString("es-AR");
+
+    }
+
+
+    function addToCart(id) {
+
+      const product = products[id];
+
+      if (!product) return;
+
+      cart.push(product);
+
+      updateCart();
+
+      showToast(
+        product.name + " agregado al carrito 🤍"
+      );
+
+    }
+
+
+    function removeFromCart(index) {
+
+      cart.splice(index, 1);
+
+      updateCart();
+
+    }
+
+
+    function updateCart() {
+
+      const cartItems =
+        document.getElementById("cartItems");
+
+      const cartCount =
+        document.getElementById("cartCount");
+
+      const cartTotal =
+        document.getElementById("cartTotal");
+
+
+      cartCount.textContent = cart.length;
+
+
+      if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+          <div class="empty-cart">
+            <div style="font-size:3rem;">🧸</div>
+            <h3>Tu carrito está vacío</h3>
+            <p>
+              Agregá un bebé o accesorio
+              para comenzar.
+            </p>
+          </div>
+        `;
+
+        cartTotal.textContent = "$0";
+
+        return;
+
+      }
+
+
+      let total = 0;
+
+
+      cartItems.innerHTML = cart.map(
+        (item, index) => {
+
+          total += item.price;
+
+          return `
+
+            <div class="cart-item">
+
+              <img
+                src="${item.image}"
+                alt="${item.name}"
+              >
+
+              <div>
+
+                <h4>
+                  ${item.name}
+                </h4>
+
+                <div class="cart-item-price">
+                  ${formatPrice(item.price)}
+                </div>
+
+              </div>
+
+              <button
+                class="remove-item"
+                onclick="removeFromCart(${index})"
+              >
+                🗑️
+              </button>
+
+            </div>
+
+          `;
+
+        }
+      ).join("");
+
+
+      cartTotal.textContent =
+        formatPrice(total);
+
+    }
+
+
+    function openCart() {
+
+      document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+
+      document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeCart() {
+
+      document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    /* =========================
+       FINALIZAR COMPRA
+    ========================== */
+
+    function checkout() {
+
+      if (cart.length === 0) {
+
+        showToast(
+          "Tu carrito está vacío 🤍"
+        );
+
+        return;
+
+      }
+
+
+      let message =
+        "Hola! 🤍 Quiero consultar por estos productos de rebornlife_by_sol:%0A%0A";
+
+
+      cart.forEach((item, index) => {
+
+        message +=
+          `${index + 1}. ${item.name} - ${formatPrice(item.price)}%0A`;
+
+      });
+
+
+      let total =
+        cart.reduce(
+          (sum, item) => sum + item.price,
+          0
+        );
+
+
+      message +=
+        `%0ATotal aproximado: ${formatPrice(total)}`;
+
+
+      const url =
+        "https://www.instagram.com/rebornlife_by_sol/";
+
+
+      window.open(
+        url,
+        "_blank"
+      );
+
+    }
+
+
+    /* =========================
+       MODAL
+    ========================== */
+
+    function showProduct(id) {
+
+      const product = products[id];
+
+      if (!product) return;
+
+
+      document.getElementById("modalImage").src =
+        product.image;
+
+      document.getElementById("modalImage").alt =
+        product.name;
+
+      document.getElementById("modalCategory").textContent =
+        product.category;
+
+      document.getElementById("modalTitle").textContent =
+        product.name;
+
+      document.getElementById("modalDescription").textContent =
+        product.description;
+
+      document.getElementById("modalPrice").textContent =
+        formatPrice(product.price);
+
+
+      document.getElementById("modalAddButton").onclick =
+        function() {
+
+          addToCart(id);
+
+          closeProduct();
+
+        };
+
+
+      document
+        .getElementById("productModal")
+        .classList.add("active");
+
+      document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeProduct() {
+
+      document
+        .getElementById("productModal")
+        .classList.remove("active");
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    /* =========================
+       TOAST
+    ========================== */
+
+    let toastTimeout;
+
+
+    function showToast(message) {
+
+      const toast =
+        document.getElementById("toast");
+
+      toast.textContent = message;
+
+      toast.classList.add("show");
+
+
+      clearTimeout(toastTimeout);
+
+
+      toastTimeout = setTimeout(
+        () => {
+
+          toast.classList.remove("show");
+
+        },
+        2500
+      );
+
+    }
+
+
+    /* =========================
+       FAVORITOS
+    ========================== */
+
+    document
+      .querySelectorAll(".favorite")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            this.classList.toggle("liked");
+
+            this.textContent =
+              this.classList.contains("liked")
+              ? "♥"
+              : "♡";
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       FILTROS
+    ========================== */
+
+    let currentFilter = "todos";
+
+
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            document
+              .querySelectorAll(".filter-btn")
+              .forEach(btn =>
+                btn.classList.remove("active")
+              );
+
+            this.classList.add("active");
+
+            currentFilter =
+              this.dataset.filter;
+
+            filterProducts();
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       BUSCADOR
+    ========================== */
+
+    document
+      .getElementById("searchInput")
+      .addEventListener(
+        "input",
+        filterProducts
+      );
+
+
+    function filterProducts() {
+
+      const search =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+
+      const cards =
+        document.querySelectorAll(".product-card");
+
+      let visible = 0;
+
+
+      cards.forEach(card => {
+
+        const category =
+          card.dataset.category;
+
+        const name =
+          card.dataset.name.toLowerCase();
+
+
+        const categoryMatch =
+          currentFilter === "todos" ||
+          category === currentFilter;
+
+
+        const searchMatch =
+          name.includes(search);
+
+
+        if (categoryMatch && searchMatch) {
+
+          card.style.display = "";
+
+          visible++;
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+
+      document.getElementById("noResults").style.display =
+        visible === 0 ? "block" : "none";
+
+    }
+
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    document
+      .querySelectorAll(".faq-question")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            const item =
+              this.parentElement;
+
+            item.classList.toggle("open");
+
+            const symbol =
+              this.querySelector("span");
+
+            symbol.textContent =
+              item.classList.contains("open")
+              ? "−"
+              : "＋";
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       MENU MOBILE
+    ========================== */
+
+    document
+      .getElementById("menuToggle")
+      .addEventListener(
+        "click",
+        function() {
+
+          document
+            .getElementById("mainMenu")
+            .classList.toggle("active");
+
+        }
+      );
+
+
+    document
+      .querySelectorAll("#mainMenu a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            document
+              .getElementById("mainMenu")
+              .classList.remove("active");
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       NEWSLETTER
+    ========================== */
+
+    document
+      .getElementById("newsletterForm")
+      .addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+          showToast(
+            "¡Gracias por suscribirte! 🤍"
+          );
+
+          this.reset();
+
+        }
+      );
+
+
+    /* =========================
+       SCROLL AL SHOP
+    ========================== */
+
+    function scrollToShop() {
+
+      document
+        .getElementById("bebes")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+      setTimeout(
+        () => {
+
+          document
+            .getElementById("searchInput")
+            .focus();
+
+        },
+        600
+      );
+
+    }
+
+
+    /* =========================
+       BOTON VOLVER ARRIBA
+    ========================== */
+
+    window.addEventListener(
+      "scroll",
+      function() {
+
+        const backTop =
+          document.getElementById("backTop");
+
+
+        if (window.scrollY > 500) {
+
+          backTop.classList.add("visible");
+
+        } else {
+
+          backTop.classList.remove("visible");
+
+        }
+
+      }
+    );
+
+
+    /* =========================
+       CERRAR MODALES AL HACER
+       CLICK AFUERA
+    ========================== */
+
+    document
+      .getElementById("productModal")
+      .addEventListener(
+        "click",
+        function(event) {
+
+          if (event.target === this) {
+
+            closeProduct();
+
+          }
+
+        }
+      );
+
+
+    document
+      .getElementById("cartOverlay")
+      .addEventListener(
+        "click",
+        function(event) {
+
+          if (event.target === this) {
+
+            closeCart();
+
+          }
+
+        }
+      );
+
+
+    /* =========================
+       ESC PARA CERRAR
+    ========================== */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          closeCart();
+
+          closeProduct();
+
+        }
+
+      }
+    );
+
+
+    /* =========================
+       INICIALIZAR
+    ========================== */
+
+    updateCart();
+
+  </script>
+
+</body>
+</html>
